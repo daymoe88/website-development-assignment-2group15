@@ -18,4 +18,9 @@ if (!$conn)
     error_log(mysqli_connect_error()); // log the error
     exit;
 }
+else
+{
+    mysqli_set_charset($conn, "utf8mb4");
+}
+
 ?>
