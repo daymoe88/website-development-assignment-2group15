@@ -10,7 +10,7 @@ CREATE TABLE Product
     productID   INT NOT NULL AUTO_INCREMENT,
     name        VARCHAR(100) NOT NULL,
     descr       VARCHAR(2000) NOT NULL,
-    price       DECIMAL(3, 2) NOT NULL,
+    price       DECIMAL(5, 2) NOT NULL,
     image       BLOB,
     stock       INT NOT NULL,
     PRIMARY KEY (productID)
@@ -35,7 +35,7 @@ CREATE TABLE UserAccount
 CREATE TABLE Cart
 (
     userID      INT NOT NULL,
-    totalCost   DECIMAL(5, 2) NOT NULL,
+    totalCost   DECIMAL(7, 2) NOT NULL,
     PRIMARY KEY (userID),
     FOREIGN KEY (userID) REFERENCES UserAccount(userID) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -56,7 +56,7 @@ CREATE TABLE Purchase
     userID          INT NOT NULL,
     productID       INT NOT NULL,
     dateAndTime     DATETIME NOT NULL,
-    total           DECIMAL(5, 2) NOT NULL,
+    total           DECIMAL(7, 2) NOT NULL,
     quantity        INT NOT NULL,
     streetAddress   VARCHAR(50) NOT NULL,
     postcode        CHAR(4) NOT NULL,
