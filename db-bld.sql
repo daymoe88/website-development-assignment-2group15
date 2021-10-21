@@ -7,7 +7,8 @@ USE Assignment02;
 
 CREATE TABLE Product
 (
-    productID   INT NOT NULL AUTO_INCREMENT,
+    productID   CHAR(5) NOT NULL,
+    console     ENUM("Nintendo Switch", "Xbox One", "Xbox Series X", "PlayStation 4", "PlayStation 5") NOT NULL,
     name        VARCHAR(100) NOT NULL,
     descr       VARCHAR(2000) NOT NULL,
     price       DECIMAL(5, 2) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE Cart
 CREATE TABLE CartProduct
 (
     userID      INT NOT NULL,
-    productID   INT NOT NULL,
+    productID   CHAR(5) NOT NULL,
     quantity    INT NOT NULL,
     PRIMARY KEY (userID, productID),
     FOREIGN KEY (userID) REFERENCES UserAccount(userID) ON UPDATE CASCADE ON DELETE CASCADE,
@@ -54,7 +55,7 @@ CREATE TABLE Purchase
 (
     purchaseNo      INT NOT NULL AUTO_INCREMENT,
     userID          INT NOT NULL,
-    productID       INT NOT NULL,
+    productID       CHAR(5) NOT NULL,
     dateAndTime     DATETIME NOT NULL,
     total           DECIMAL(7, 2) NOT NULL,
     quantity        INT NOT NULL,
@@ -69,18 +70,10 @@ CREATE TABLE Purchase
     FOREIGN KEY (productID) REFERENCES Product(productID) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
-CREATE TABLE ProductConsole
-(
-    productID   INT NOT NULL,
-    console     VARCHAR(20) NOT NULL,
-    PRIMARY KEY (productID, console),
-    FOREIGN KEY (productID) REFERENCES Product(productID) ON UPDATE CASCADE ON DELETE CASCADE
-);
-
 CREATE TABLE ProductGenre
 (
-    productID   INT NOT NULL,
-    genre       VARCHAR(20) NOT NULL,
+    productID   CHAR(5) NOT NULL,
+    genre       ENUM("Platformer", "Open World") NOT NULL,
     PRIMARY KEY (productID, genre),
     FOREIGN KEY (productID) REFERENCES Product(productID) ON UPDATE CASCADE ON DELETE CASCADE
 );
@@ -91,5 +84,4 @@ GRANT all privileges ON Assignment02.UserAccount TO dbadmin@localhost;
 GRANT all privileges ON Assignment02.Cart TO dbadmin@localhost;
 GRANT all privileges ON Assignment02.CartProduct TO dbadmin@localhost;
 GRANT all privileges ON Assignment02.Purchase TO dbadmin@localhost;
-GRANT all privileges ON Assignment02.ProductConsole TO dbadmin@localhost;
 GRANT all privileges ON Assignment02.ProductGenre TO dbadmin@localhost;
