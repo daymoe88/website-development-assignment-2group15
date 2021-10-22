@@ -26,10 +26,6 @@ CREATE TABLE UserAccount
     password        VARCHAR(20) NOT NULL,
     streetAddress   VARCHAR(50),
     postcode        CHAR(4),
-    cardNo          TINYINT,
-    cardName        VARCHAR(30),
-    cardExpiry      DATETIME,
-    cardCVV         TINYINT,
     PRIMARY KEY (userID)
 );
 
