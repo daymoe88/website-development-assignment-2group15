@@ -1,74 +1,4 @@
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-
-  </head>
-  <body>
-    <div>
-      <h1><b>Welcome to the WebDev quiz.</b></h1>
-      <form>
-        <div>
-            <label>What is your name?</label>
-            <input type="text" name="name" placeholder="Required" />
-
-            <label>How old are you?</label>
-            <input type="text" name="age" />
-
-            <label>What is your email address?</label>
-            <input type="text" name="email" />
-        </div>
-        <input type="button" value="Begin" />
-      </form>
-    </div>
-  </body>
-</html> -->
-
-
-
-<!-- start of checkpoint 1 -->
-
-<!-- <!DOCTYPE html>
-<html lang= "en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Prac-2">
-  <meta name="author" content="Brad Dayman">
-<link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <div class="ex1">
-  <div class="content">
-
-  <div class="input">
-
-<h2><b> Welcome to the WebDev quiz.</b></h2>
-<br>
-    <form name="quizform">
-      <label> What is your name? <br> </label>
-      <input type="text" minlength="2" placeholder="required" required/>
-<br>
-      <label> <br> How old are you? <br> </label>
-      <input type="number" min="10" max="100" required/>
-<br>
-      <label> <br> What is your email address? <br> </label>
-      <input type="email" required />
-      <br>
-      <br>
-      <input type="submit" class="button" value="Begin">
-    </form> 
- </div> 
-</div>
-</div>
-
-
-
-</body>
-</html> -->
-
-<!-- start of checkpoint2 -->
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang= "en">
 <head>
   <meta charset="UTF-8">
@@ -78,76 +8,71 @@
 <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>  
-  <form action="quiz.html" action="GET">
+  <form action="checkout.html" action="GET">
   <div class="ex1">
   <div class="content">
-   <div class="container"> -->
-  <!-- <div class="input">
+  <!-- <div class="container"> -->
+  <div class="input">
 
-<h2><b> Welcome to the WebDev quiz.</b></h2>
+<h2><b> Account details.</b></h2>
 <br>
- 
-      <label id = entername > What is your name? <br> </label>
+
+<label id = title >  Title </label>
+<!-- <input type="text" minlength="2"placeholder="required" required/> -->
+Mr. <input type="radio" name="title"
+→ value=" Mr."/>
+Mrs. <input type="radio" name="title"
+→ value=" Mrs."/>
+Ms. <input type="radio" name="title"
+→ value=" Ms."/>
+<br/>
+
+      <label id = name > First Name <br> </label>
+      <input type="text" name="firstname" minlength="2" placeholder="required" required/>
+<br>
+<label id = name > Last Name <br> </label>
+      <input type="text" name="lastname" minlength="2" placeholder="required" required/>
+<br>
+
+      <label id=age> <br> Date of Birth <br> </label>
+      <input type="number" name="dob" min="10" max="100" required/>
+<br>
+      <label id=email> <br> E-mail address <br> </label>
+      <input type="email" name="email" required />
+      <br>
+      <label id=address> <br> Home Address <br> </label>
+      <input type="adress" name="homeaddress" required />
+      <br>
+      <label id=postcode> <br> Postcode <br> </label>
+      <input type="number" min="4" max="4" required/>
+      <br>
+    
+      <label id=contactnumber> <br> Contact Number <br> </label>
+      <input type="number" min="10" max="12" required/>
+      <br>
+
+      <label id = address > <br> Home Address <br> </label>
       <input type="text" minlength="2" placeholder="required" required/>
-<br>
-      <label id=age> <br> How old are you? <br> </label>
-      <input type="number" min="10" max="100" required/>
-<br>
-      <label id=email> <br> What is your email address? <br> </label>
-      <input type="email" required />
+      <br>
+
+      <label id=carddetails> <br> Creditcard Number <br> </label>
+      <input type="number" min="10" max="16" required/>
+      <br>
+
+      <label id=cardccv> <br> Creditcard CCV Number <br> </label>
+      <input type="number" min="3" max="3" required/>
       <br>
       <br>
-      <input type="submit" id= "submit" class="button" value="Begin">
-       <button on click="getparam" id="submit">submit</button> -->
-    <!-- </form> 
+      <br>
+      <input type="submit" id= "submit" class="button" value="Save">
+      <!-- <button on click="getparam" id="submit">submit</button> -->
+      <input type="submit" id= "submit" class="button" value="Cancel">
+
+    </form> 
  </div> 
 </div>
-</div> -->
+</div>
 <!-- </div> -->
-<!-- 
-</body>
-</html> --> 
-<!-- start of checkpoint2 -->
-
-
-
- <!DOCTYPE html> 
-<html lang= "en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Prac-2">
-  <meta name="author" content="Brad Dayman">
-  <title Practical 2 ></title>
-<link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>  
-  <form action="quiz.html" action="GET">
-  <div class="ex1">
-  <div class="content">
-  <div class="container">
-  <div class="input">
-
-<h2><b> Welcome to the WebDev quiz.</b></h2>
-<br>
- 
-      <label id = entername > What is your name? <br> </label>
-      <input type="text" minlength="2" placeholder="required" required/>
-<br>
-      <label id=age> <br> How old are you? <br> </label>
-      <input type="number" min="10" max="100" required/>
-<br>
-      <label id=email> <br> What is your email address? <br> </label>
-      <input type="email" required />
-      <br>
-      <br>
-      
-      <input type="submit" id= "submit" class="button" value= "BEGIN">
- 
-    </form> 
- </div> 
-</div>
-</div>
- </div>
 
 </body>
 </html>
