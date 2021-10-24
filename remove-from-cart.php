@@ -5,7 +5,7 @@
 if (isset($_POST['productID']))
 {
     // open a new connection to the db
-    require_once "dbconn.php";
+    require_once "../dbconn.php";
 
     // create a query to delete the product from the CartProduct table
     $query = "DELETE FROM CartProduct WHERE productID=?;";

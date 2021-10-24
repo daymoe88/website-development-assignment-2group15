@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang=en>
     <head>
-        <title>Your Cart</title>
+        <title>Your Cart | BPL Games</title>
         <meta charset="utf-8">
         <meta name="author" content="Laura Spencer"/>
         <meta name="description" content="Assignment 02"/>
     </head>
     <body>
+        <?php require_once "../menu-bar.php"; ?>
         <div id="cart-items">
             <h1>Your Shopping Cart</h1>
             <?php
-            include_once "db-functions.php";
+            include_once "../db-functions.php";
 
             // connect to the db
-            require_once "dbconn.php";
+            require_once "../dbconn.php";
 
             // select the items corresponding to the users id (retrieved from the user's session data)
-            $query = "SELECT * FROM CartProduct WHERE userID=1;";
+            $query = "SELECT * FROM CartProduct WHERE userID=".$_SESSION['userID'].";";
 
             if ($result = mysqli_query($conn, $query))
             {
@@ -70,7 +71,7 @@
                     echo "<span>$".$totalCost."</span>";
 
                     // allow the user to proceed to checkout their cart
-                    echo "<button type='submit' formaction='checkout.php' formmethod='POST'>Proceed to Checkout</button>";
+                    echo "<button type='submit' formaction='../checkout.php' formmethod='POST'>Proceed to Checkout</button>";
 
                 }
                 else
@@ -79,6 +80,10 @@
                     echo "There are no items in your cart";
                 }
 
+            }
+            else
+            {
+                echo "There are no items in your cart. Please <a href='../users/login.php'>Log In</a> or <a href='../users/signup.php'>Sign Up</a> to begin making purchases.";
             }
 
             // close connection to the db

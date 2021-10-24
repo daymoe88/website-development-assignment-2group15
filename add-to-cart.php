@@ -1,11 +1,11 @@
 <?php
 
-include_once "db-functions.php";
+include_once "../db-functions.php";
 
 if (isset($_POST['quantity']) && isset($_POST['productID']))
 {
     // open a new connection to the db
-    require_once "dbconn.php";
+    require_once "../dbconn.php";
 
     // create a query to add the product to the cart
     $query = "INSERT INTO CartProduct VALUES (1, ?, ?);";
@@ -33,7 +33,7 @@ if (isset($_POST['quantity']) && isset($_POST['productID']))
         //update_stock($conn, $cartItem['productID'], $cartItem['quantity']);
 
         // return to previous page
-        header('location: product-information.php?productID='.$cartItem['productID']);
+        header('location: ../product-information.php?productID='.$cartItem['productID']);
     }
     else
     {
