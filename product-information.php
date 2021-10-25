@@ -17,8 +17,10 @@
         if (!$product)
         {
             echo "Error: Invalid product selected.";
+            mysqli_free_result($result);
             exit;
         }
+        mysqli_free_result($result);
     }
     else
     {
