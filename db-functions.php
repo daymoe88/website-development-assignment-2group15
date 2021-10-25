@@ -60,6 +60,21 @@ function update_stock($conn, $productID, $quantity)
 }
 
 
+function get_all_products($conn)
+{
+    $query = "SELECT * FROM Product;";
+
+    $result = mysqli_query($conn, $query);
+    $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    // free the result set
+    mysqli_free_result($result);
+
+    // return the resultant table
+    return $products;
+
+}
+
 /*
     Function to retrieve products from the database filtered by searched keywords.
     Removes HTML characters in the provided searchQuery.

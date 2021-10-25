@@ -26,13 +26,20 @@
 
                 $products = get_products($conn, $_GET['console'], $_GET['genre']);
             }
-            else
+            else if (!empty($_GET['search']))
             {
                 // user used the search bar
                 $products = get_products_by_search($conn, $_GET['search']);
 
                 // display a header for the results
                 echo "<h1>".count($products)." search results for: ".$_GET['search']."</h1>";
+            }
+            else
+            {
+                // by default, display all the products separated by console
+                $products = get_all_products($conn);
+
+                //echo "<h1>Nintendo Switch Games:</h1>";
             }
 
             
