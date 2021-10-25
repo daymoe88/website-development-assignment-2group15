@@ -59,7 +59,10 @@ function update_stock($conn, $productID, $quantity)
 
 }
 
-
+/*
+    Function to retrieve products from the database filtered by searched keywords.
+    Performs no sanitisation.
+*/
 function get_all_products($conn)
 {
     $query = "SELECT * FROM Product;";
@@ -126,7 +129,7 @@ function get_products($conn, $console, $genre)
     else
     {
         // create a query to filter products by genre
-        $query = "SELECT * FROM Product WHERE productID = (SELECT productID FROM ProductGenre WHERE genre=?);";
+        $query = "SELECT * FROM Product WHERE productID IN (SELECT productID FROM ProductGenre WHERE genre=?);";
         $param = $genre;
     }
     
