@@ -1,7 +1,13 @@
 <?php session_start(); ?>
 
 <ul id="top-panel">
-    <!-- <li><a href="products.php"><img src="site-logo" alt="Logo"></a></li> -->
+    <!-- <li><a href="home.php"><img src="site-logo" alt="Logo"></a></li> -->
+    <form action='home.php' method='GET'>
+        <input type='text' name='search' placeholder='Search..'></input>
+        <input type='submit' name='searchBtn' value='Search'></input>
+        <input type='submit' name='console' value='Nintendo Switch'></input>
+        <input type='submit' name='genre' value='Open World'></input>
+    </form>
     <?php
     if (isset($_SESSION['logged-in']) && $_SESSION['logged-in'])
     {
