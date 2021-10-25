@@ -69,7 +69,7 @@ CREATE TABLE Purchase
 CREATE TABLE ProductGenre
 (
     productID   CHAR(5) NOT NULL,
-    genre       ENUM("Platformer", "Open World") NOT NULL,
+    genre       VARCHAR(20) NOT NULL,
     PRIMARY KEY (productID, genre),
     FOREIGN KEY (productID) REFERENCES Product(productID) ON UPDATE CASCADE ON DELETE CASCADE
 );

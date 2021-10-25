@@ -103,3 +103,43 @@ Muster your courage and begin your journey in the face of terrible threats in a 
 INSERT INTO Product VALUES ("010XS", "Xbox Series X", "Little Nightmares 2", "Will you dare to face this collection of new, little nightmares?
 <br><br>
 Little Nightmares II is a suspense-adventure game in which you play as Mono, a young boy trapped in a world that has been distorted by the humming transmission of a distant tower. With Six, the girl in a yellow raincoat, as his guide, Mono sets out to discover the dark secrets of The Signal Tower and save Six from her terrible fate; but their journey will not be straightforward as Mono and Six will face a gallery of new threats from the terrible residents of this world.", 59.95, "product-images/010XS.jpg", 130);
+
+/*  ProductGenre inserts    */
+INSERT INTO ProductGenre VALUES ('001NS', 'Sandbox');
+INSERT INTO ProductGenre VALUES ('001NS', 'Survival');
+INSERT INTO ProductGenre VALUES ('001P4', 'Sandbox');
+INSERT INTO ProductGenre VALUES ('001P4', 'Survival');
+INSERT INTO ProductGenre VALUES ('001XO', 'Sandbox');
+INSERT INTO ProductGenre VALUES ('001XO', 'Survival');
+INSERT INTO ProductGenre VALUES ('002NS', 'Action');
+INSERT INTO ProductGenre VALUES ('002NS', 'Adventure');
+INSERT INTO ProductGenre VALUES ('002NS', 'Open World');
+INSERT INTO ProductGenre VALUES ('003P4', 'Open World');
+INSERT INTO ProductGenre VALUES ('003P4', 'Action');
+INSERT INTO ProductGenre VALUES ('003XO', 'Open World');
+INSERT INTO ProductGenre VALUES ('003XO', 'Action');
+INSERT INTO ProductGenre VALUES ('004NS', 'Sport');
+INSERT INTO ProductGenre VALUES ('004NS', 'Simulator');
+INSERT INTO ProductGenre VALUES ('004P4', 'Sport');
+INSERT INTO ProductGenre VALUES ('004P4', 'Simulator');
+INSERT INTO ProductGenre VALUES ('005P4', 'Simulator');
+INSERT INTO ProductGenre VALUES ('005P4', 'Racing');
+INSERT INTO ProductGenre VALUES ('006P4', 'Survival');
+INSERT INTO ProductGenre VALUES ('006P4', 'Horror');
+INSERT INTO ProductGenre VALUES ('006P5', 'Survival');
+INSERT INTO ProductGenre VALUES ('006P5', 'Horror');
+INSERT INTO ProductGenre VALUES ('006XS', 'Survival');
+INSERT INTO ProductGenre VALUES ('007NS', 'Simulator');
+INSERT INTO ProductGenre VALUES ('007NS', 'Casual');
+INSERT INTO ProductGenre VALUES ('008XS', 'Simulator');
+INSERT INTO ProductGenre VALUES ('008XS', 'Open World');
+INSERT INTO ProductGenre VALUES ('009NS', 'Platformer');
+INSERT INTO ProductGenre VALUES ('009NS', 'Metroidvania');
+INSERT INTO ProductGenre VALUES ('009XO', 'Platformer');
+INSERT INTO ProductGenre VALUES ('009XO', 'Metroidvania');
+INSERT INTO ProductGenre VALUES ('010NS', 'Horror');
+INSERT INTO ProductGenre VALUES ('010NS', 'Puzzle');
+INSERT INTO ProductGenre VALUES ('010P4', 'Horror');
+INSERT INTO ProductGenre VALUES ('010P4', 'Puzzle');
+INSERT INTO ProductGenre VALUES ('010XS', 'Horror');
+INSERT INTO ProductGenre VALUES ('010XS', 'Puzzle');
