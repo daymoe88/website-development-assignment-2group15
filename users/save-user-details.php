@@ -67,6 +67,9 @@ if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['
             $_SESSION['errEmail'] = "The email address you have entered is already associated with an account.";
             header("location: modify-user-details.php");
 
+            // free the result set
+            mysqli_free_result($result);
+
             // close the prepared statement
             mysqli_stmt_close($statement);
 
@@ -75,6 +78,9 @@ if (!empty($_POST['firstName']) && !empty($_POST['lastName']) && !empty($_POST['
 
             exit;
         }
+
+        // free the result set
+        mysqli_free_result($result);
     }
 
     // if the password fields were left empty, then don't update the password in the database

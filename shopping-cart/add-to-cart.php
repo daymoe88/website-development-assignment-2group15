@@ -34,6 +34,9 @@ if (isset($_POST['quantity']) && isset($_POST['productID']))
 
         // return to previous page
         header('location: ../product-information.php?productID='.$cartItem['productID']);
+
+        // free the generated set
+        mysqli_free_result($result);
     }
     else
     {

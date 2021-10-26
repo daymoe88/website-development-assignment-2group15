@@ -30,9 +30,10 @@
                 <li>Postcode: ".$user['postcode']."</li>
                 </ul>";
 
+                mysqli_free_result($result);
+
             }
 
-            mysqli_free_result($result);
 
             ?>
 
@@ -94,9 +95,9 @@
                     // if the user has not made any purchases
                     echo "You have not made any purchases yet.";
                 }
-            }
 
-            mysqli_free_result($result);
+                mysqli_free_result($result);
+            }
 
             // close connection to the db
             mysqli_close($conn);

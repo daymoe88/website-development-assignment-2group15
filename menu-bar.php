@@ -5,6 +5,15 @@
     <form action='home.php' method='GET'>
         <input type='text' name='search' placeholder='Search..'></input>
         <input type='submit' name='searchBtn' value='Search'></input>
+        <input list='console'>
+            <datalist id='console'>
+                <option value="Nintendo Switch">
+                <option value="PlayStation 4">
+                <option value="PlayStation 5">
+                <option value="Xbox One">
+                <option value="Xbox Series X">
+            </datalist>
+        </input>
         <input type='submit' name='console' value='Nintendo Switch'></input>
         <input type='submit' name='genre' value='Open World'></input>
     </form>

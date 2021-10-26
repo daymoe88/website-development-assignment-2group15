@@ -61,9 +61,9 @@
 
                 <?php
 
-            }
+                mysqli_free_result($result);
 
-            mysqli_free_result($result);
+            }
 
             // close connection to the db
             mysqli_close($conn);
@@ -73,82 +73,3 @@
         </div>
     </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang= "en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Prac-2">
-  <meta name="author" content="Brad Dayman">
-  <title Practical 2 ></title>
-<link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>  
-  <form action="checkout.html" action="GET">
-  <div class="ex1">
-  <div class="content"> -->
-  <!-- <div class="container"> -->
-<!--  <div class="input">
-
-<h2><b> Account details.</b></h2>
-<br>
-
-<label id = title >  Title </label> -->
-<!-- <input type="text" minlength="2"placeholder="required" required/> -->
-<!--Mr. <input type="radio" name="title"
-→ value=" Mr."/>
-Mrs. <input type="radio" name="title"
-→ value=" Mrs."/>
-Ms. <input type="radio" name="title"
-→ value=" Ms."/>
-<br/>
-
-      <label id = name > First Name <br> </label>
-      <input type="text" name="firstname" minlength="2" placeholder="required" required/>
-<br>
-<label id = name > Last Name <br> </label>
-      <input type="text" name="lastname" minlength="2" placeholder="required" required/>
-<br>
-
-      <label id=age> <br> Date of Birth <br> </label>
-      <input type="number" name="dob" min="10" max="100" required/>
-<br>
-      <label id=email> <br> E-mail address <br> </label>
-      <input type="email" name="email" required />
-      <br>
-      <label id=address> <br> Home Address <br> </label>
-      <input type="adress" name="homeaddress" required />
-      <br>
-      <label id=postcode> <br> Postcode <br> </label>
-      <input type="number" min="4" max="4" required/>
-      <br>
-    
-      <label id=contactnumber> <br> Contact Number <br> </label>
-      <input type="number" min="10" max="12" required/>
-      <br>
-
-      <label id = address > <br> Home Address <br> </label>
-      <input type="text" minlength="2" placeholder="required" required/>
-      <br>
-
-      <label id=carddetails> <br> Creditcard Number <br> </label>
-      <input type="number" min="10" max="16" required/>
-      <br>
-
-      <label id=cardccv> <br> Creditcard CCV Number <br> </label>
-      <input type="number" min="3" max="3" required/>
-      <br>
-      <br>
-      <br>
-      <input type="submit" id= "submit" class="button" value="Save"> -->
-      <!-- <button on click="getparam" id="submit">submit</button> -->
-      <!-- <input type="submit" id= "submit" class="button" value="Cancel">
-
-    </form> 
- </div> 
-</div>
-</div> -->
-<!-- </div> -->
-
-<!-- </body>
-</html> -->

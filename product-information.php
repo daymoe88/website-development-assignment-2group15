@@ -17,12 +17,21 @@
         if (!$product)
         {
             echo "Error: Invalid product selected.";
+
+            // free the result set
+            mysqli_free_result($result);
+
+            // close connection to the db
+            mysqli_close($conn);
             exit;
         }
+
     }
     else
     {
         echo "Error: Invalid product selected.";
+        // close connection to the db
+        mysqli_close($conn);
         exit;
     }
     ?>
@@ -89,6 +98,10 @@
             </div>
         </div>
         <?php
+
+        // free the result set at the end
+        mysqli_free_result($result);
+
         // close connection to the db at the end
         mysqli_close($conn);
         ?>

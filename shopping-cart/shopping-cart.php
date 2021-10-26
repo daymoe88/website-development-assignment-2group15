@@ -44,7 +44,7 @@
                         // print the details of the product, including buttons to remove the item from the cart and to update the details
                         echo "<li>
                         <div class='cart-item'>
-                        <img src='".$product['image']."' alt='Image Not Available'>
+                        <img src='../".$product['image']."' alt='Image Not Available'>
                         ".$product['name']."
                         <form action='remove-from-cart.php' method='POST'>
                         <input type='hidden' name='productID' value='".$product['productID']."'></input>
@@ -61,6 +61,8 @@
                         // update the current total items and current total price
                         $totalItems = $totalItems + $cartItem['quantity'];
                         $totalCost = number_format($totalCost + $subtotal, 2, '.', ',');
+
+                        mysqli_free_result($productsResult);
 
                     }
 
@@ -79,6 +81,8 @@
                     // if the user has an empty cart
                     echo "There are no items in your cart";
                 }
+
+                mysqli_free_result($result);
 
             }
             else

@@ -62,12 +62,11 @@ if (!empty($_POST['email']) && !empty($_POST['password']))
 
         }
 
+        // free the result set
+        mysqli_free_result($result);
+
         // close the prepared statement
         mysqli_stmt_close($statement);
-
-        // close connection to the db
-        mysqli_close($conn);
-
         
     }
     else
@@ -75,6 +74,9 @@ if (!empty($_POST['email']) && !empty($_POST['password']))
         echo "Error: Unable to access database.<br>";
         error_log(mysqli_error($conn));
     }
+
+    // close connection to the db
+    mysqli_close($conn);
 
 }
 else

@@ -63,12 +63,11 @@
                 // if no products, let the user know
                 echo "No results found.";
             }
+
+            // close connection to the db at the end
+            mysqli_close($conn);
             
             ?>
         </div>
-        <?php
-        // close connection to the db at the end
-        mysqli_close($conn);
-        ?>
     </body>
 </html>
