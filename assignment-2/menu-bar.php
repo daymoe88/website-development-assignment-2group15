@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <ul id="top-panel">
-    <!-- <li><a href="home.php"><img src="site-logo" alt="Logo"></a></li> -->
+    <li><a id='logo' href="http://localhost/assignment-2/home.php">BPL Games</a></li>
     <form action='http://localhost/assignment-2/home.php' method='GET'>
         <input type='text' name='search' placeholder='Search..'></input>
         <input type='submit' name='searchBtn' value='Search'></input>
