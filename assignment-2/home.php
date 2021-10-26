@@ -11,6 +11,7 @@
         <meta charset="utf-8">
         <meta name="author" content="Laura Spencer"/>
         <meta name="description" content="Assignment 02"/>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <?php require_once "menu-bar.php"; ?>
