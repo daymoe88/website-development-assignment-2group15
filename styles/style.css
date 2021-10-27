@@ -2,6 +2,9 @@ body {
     font-family: Arial;
     font-size: 17px;
     padding: 8px;
+    background-color: darkblue;
+    padding-left: 0px;
+    padding-right: 0%;
 }
 h2{
     text-align:left;
@@ -9,6 +12,9 @@ h2{
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    border-spacing: auto;
+    padding: 0;
 }
 
 .error {
@@ -44,7 +50,7 @@ h2{
 }
 
 .container {
-    background-color: #FFFFFF;
+    background-color: darkblue;
     padding: 3px 18px 13px 18px;
     border: 1px solid lightgrey;
     border-radius: 3px;
@@ -113,4 +119,78 @@ span.price {
     .col-25 {
         margin-bottom: 20px;
     }
+}
+
+/* css code by Brad for home page and home page menu */
+/* home page background */
+#products{
+    background-color: blue;
+}
+
+/* search bar */
+form.top-panel{ 
+    
+    float: left;
+}
+/* home nintendo,ps5 and xbox links */
+a{ 
+    padding: 10px;
+    color: green;
+    font-weight: bold;
+
+}
+div.a{
+    display: block;
+    border-spacing: 50em;
+    background-color: red;
+}
+
+div a{
+    border-bottom: 100px;
+    border-spacing: 100cm;
+    padding: 50px;
+    border-top: 100px;
+    border-bottom: 40px;
+}
+
+ul{
+    /* list-style: none; */
+    padding-inline-start: 0px;
+
+}
+
+ul li{
+    list-style: none;
+    /* background-color: darkblue; */
+    display: inline-block;
+    
+    line-height: 4px;
+    width: 134px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+ul li a {
+    display: block;
+text-decoration: none;
+font-size: 13px;
+font-family: Arial, Helvetica, sans-serif;
+color: 9E9E9E;
+padding:0 20px
+}
+ul #top-panel{
+background-color: #FFFFFF;
+border-spacing: 10em ;
+}
+
+/* for images */
+.product-image{
+    resize: vertical;
+    width: 220px;
+    height: 220px;
+border-spacing: 20px;
+}
+
+.product-display{
+align-items: center;
 }
