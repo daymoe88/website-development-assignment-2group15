@@ -25,7 +25,9 @@ CREATE TABLE UserAccount
     email           VARCHAR(50) UNIQUE NOT NULL,
     password        VARCHAR(255) NOT NULL,
     streetAddress   VARCHAR(50),
+    city            VARCHAR(30),
     postcode        CHAR(4),
+    state           ENUM("ACT", "New South Wales", "Victoria", "South Australia", "Western Australia", "Northern Territory", "Queensland", "Tasmania");
     PRIMARY KEY (userID)
 );
 
@@ -42,6 +44,7 @@ CREATE TABLE CartProduct
     userID      INT NOT NULL,
     productID   CHAR(5) NOT NULL,
     quantity    INT NOT NULL,
+    subtotal    DECIMAL(7, 2) NOT NULL,
     PRIMARY KEY (userID, productID),
     FOREIGN KEY (userID) REFERENCES UserAccount(userID) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (productID) REFERENCES Product(productID) ON UPDATE CASCADE ON DELETE CASCADE

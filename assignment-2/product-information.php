@@ -60,13 +60,13 @@
                 else
                 {
                 ?>
-                <form action='shopping-cart/add-to-cart.php' method='POST'>
+                <form action='shopping-cart/add-to-cart.php?return=product-information.php?productID=<?php echo $product['productID']; ?>' method='POST'>
                     <input type='hidden' name='productID' value='<?php echo $product['productID'];?>'></input>
                     <label for='quantity'>Quantity:</label>
                     <input type='number' name='quantity' min='0' max=<?php echo $product['stock']; ?> value='1'></input>
                     <?php
                     // check the status of this item in the user's current shopping cart
-                    // note that it's safe to embed $product['productID'] directly into the query, since it's already been sanitised via 'get_product_data' function
+                    // note that it's safe to embed $product['productID'] directly into the query here
                     $query = "SELECT * FROM CartProduct WHERE userID=".$_SESSION['userID']." AND productID='".$product['productID']."';";
                     if ($cartItems = mysqli_query($conn, $query))
                     {
@@ -79,15 +79,16 @@
                         {
                             // if instead the item is not already in the user's cart, they should be able to add it here:
                             echo "<input type='submit' value='Add To Cart'></input>";
-                        }
 
-                        // only allow them to buy if the user is logged in
-                        echo "<input type='submit' value='Buy Now' formaction='checkout.php'></input>";
+                            // or they should be able to buy it immediately
+                            //echo "<input type='submit' value='Buy Now' formaction='shopping-cart/add-to-cart.php?return=checkout.php'></input>";
+                        }
 
                         mysqli_free_result($cartItems);
                     }
                     else
                     {
+                        // query will fail if no userID, ie if the user is not logged in
                         echo "Please log in to purchase this item.";
                     }
 

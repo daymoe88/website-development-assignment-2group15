@@ -5,11 +5,13 @@
     <form action='http://localhost/assignment-2/home.php' method='GET'>
         <input type='text' name='search' placeholder='Search..'></input>
         <input type='submit' name='searchBtn' value='Search'></input>
-        <input type='submit' class='console' value='Nintendo Switch'></input>
-        <input type='submit' class='console' value='PlayStation 4'></input>
-        <input type='submit' class='console' value='PlayStation 5'></input>
-        <input type='submit' class='console' value='Xbox One'></input>
-        <input type='submit' class='console' value='Xbox Series X'></input>
+        <div class='dropdown-btns'>
+            <input type='submit' name='console' value='Nintendo Switch'></input>
+            <input type='submit' name='console' value='PlayStation 4'></input>
+            <input type='submit' name='console' value='PlayStation 5'></input>
+            <input type='submit' name='console' value='Xbox One'></input>
+            <input type='submit' name='console' value='Xbox Series X'></input>
+        </div>
         <input type='submit' name='genre' value='Open World'></input>
     </form>
     <?php

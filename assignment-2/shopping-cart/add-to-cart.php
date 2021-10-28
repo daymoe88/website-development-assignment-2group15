@@ -34,8 +34,9 @@ if (isset($_POST['quantity']) && isset($_POST['productID']))
         // update the stock levels in the database -- NOT YET!! only update stock levels on purchases!!!
         //update_stock($conn, $cartItem['productID'], $cartItem['quantity']);
 
-        // return to previous page
+        // return to the page stipulated in the URL param
         header('location: ../product-information.php?productID='.$cartItem['productID']);
+        //header('location: ../'.htmlspecialchars($_GET['return']));
 
         // free the generated set
         mysqli_free_result($result);

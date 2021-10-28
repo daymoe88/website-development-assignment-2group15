@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta name="author" content="Laura Spencer"/>
         <meta name="description" content="Assignment 02"/>
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel='stylesheet' href='styles/style.css'>
     </head>
     <body>
         <?php require_once "menu-bar.php"; ?>
@@ -24,6 +24,8 @@
                 // the user filtered either by console or by genre
                 // display a header for the results
                 echo "<h1>".$_GET['console'].$_GET['genre']." Games:</h1>";
+
+                echo "get";
 
                 $products = get_products($conn, $_GET['console'], $_GET['genre']);
             }
@@ -39,6 +41,8 @@
             {
                 // by default, display all the products separated by console
                 $products = get_all_products($conn);
+
+                echo "<h1>BPL Games</h1>";
 
                 //echo "<h1>Nintendo Switch Games:</h1>";
             }
